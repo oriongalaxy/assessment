@@ -5,22 +5,22 @@ resource "aws_lb" "lb" {
   security_groups    = [aws_security_group.lb_sg.id]
   subnets            = module.vpc.public_subnets
 }
-#  resource "aws_lb_listener" "https_listener" {
-#   default_action {
-#     type = "fixed-response"
-#     fixed_response {
-#       content_type = "application/json"
-#       message_body = "Unauthorised"
-#       status_code  = 401
-#     }
-#   }
+ resource "aws_lb_listener" "https_listener" {
+  default_action {
+    type = "fixed-response"
+    fixed_response {
+      content_type = "application/json"
+      message_body = "Unauthorised"
+      status_code  = 401
+    }
+  }
 
-#   protocol          = "HTTPS"
-#   load_balancer_arn = aws_lb.lb.arn
-#   port              = 443
-#   ssl_policy        = var.ssl_policy
-#   certificate_arn   = data.aws_acm_certificate.cert.arn
-# }
+  protocol          = "HTTPS"
+  load_balancer_arn = aws_lb.lb.arn
+  port              = 443
+  ssl_policy        = var.ssl_policy
+  certificate_arn   = data.aws_acm_certificate.cert.arn
+}
 
 resource "aws_lb_listener" "http_listner" {
   load_balancer_arn = aws_lb.lb.arn
@@ -40,7 +40,7 @@ resource "aws_lb_listener" "http_listner" {
 
 
 # resource "aws_route53_zone" "prod" {
-#   name = "assmntlex.com"
+#   name = var.basedomain
 
 #   tags = {
 #     Environment = "prod"
