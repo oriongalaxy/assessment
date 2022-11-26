@@ -30,7 +30,7 @@ Enter Secret Key: %%%
 ## Get configuration files from REPO
 Utilize the command below to clone the repo
  ```
- git clone "" 
+ git clone "https://github.com/oriongalaxy/assessment" 
  ```
 
 
