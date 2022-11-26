@@ -39,13 +39,13 @@ resource "aws_lb_listener" "http_listner" {
 }
 
 
-# resource "aws_route53_zone" "prod" {
-#   name = var.basedomain
+resource "aws_route53_zone" "prod" {
+  name = var.basedomain
 
-#   tags = {
-#     Environment = "prod"
-#   }
-# }
+  tags = {
+    Environment = "prod"
+  }
+}
 
 resource "aws_route53_record" "www-prod" {
   zone_id = data.aws_route53_zone.zone.zone_id
