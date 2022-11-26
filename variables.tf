@@ -45,7 +45,7 @@ variable "vpc_private_subnets" {
 variable "base_domain" {
   type        = string
   description = "Base domain"
-  default = "assmntlex.com"
+  default = "lexolalomi.com"
 }
 
 variable "target_type" {
@@ -66,11 +66,6 @@ variable "ssl_policy" {
   default     = "ELBSecurityPolicy-2016-08"
 }
 
-/*variable "endpoints" {
-  description = "List of endpoints that will expose the load balancer"
-  type        = list(any)
-}
-*/
 
 variable "internal" {
     type = bool

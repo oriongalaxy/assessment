@@ -5,5 +5,8 @@
 *.tfstate.*
 *.tfvars 
 
-
+# Too heavy 
 .terraform.lock.hcl
+
+#no value in there 
+local.tf 
