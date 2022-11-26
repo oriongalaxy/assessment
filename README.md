@@ -1,4 +1,4 @@
-## Terraform Infrast
+## Terraform Infrastructure Deployment 
 
 # Prerequisites 
 * AWS Acccount
