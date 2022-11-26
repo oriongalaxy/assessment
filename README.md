@@ -4,7 +4,12 @@
 * AWS Acccount
 * Git 
 * Terraform 
+## How to use 
 
+* Create a .tfvars file and pass values into variables. Reference the variables.tf file  
+* Default values have been set for all values but they can be changed in the variables.tf file
+* Run Terraform init and terraform apply. 
+* Module used for creating vpc and subnet is specified in the main.tf. Module input and output can be reviewed on the terraform registry and values passed accordingly.  
 ## Authentication for permissions
 The following are options for providing permissions to the aws.
 
@@ -50,3 +55,4 @@ $ terraform apply --auto-approve
 ````
 ## Destroy Infrastructure
 $ terraform destroy --auto-approve 
+
