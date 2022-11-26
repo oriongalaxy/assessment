@@ -5,7 +5,7 @@ resource "aws_lb" "lb" {
   security_groups    = [aws_security_group.lb_sg.id]
   subnets            = module.vpc.public_subnets
 }
-/* resource "aws_lb_listener" "https_listener" {
+ resource "aws_lb_listener" "https_listener" {
   default_action {
     type = "redirect"
     redirect {
@@ -22,7 +22,7 @@ resource "aws_lb" "lb" {
   ssl_policy        = var.ssl_policy
   certificate_arn   = data.aws_acm_certificate.cert.arn
 }
-*/
+
 resource "aws_lb_listener" "http_listner" {
   load_balancer_arn = aws_lb.lb.arn
   port              = 80
